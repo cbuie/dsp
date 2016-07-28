@@ -60,7 +60,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will use vim.  I feel like becuase it is a standard on many machines, it will provide an efficient means to work in multiple environments/machines.
 
 --
 
@@ -68,6 +68,16 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will use Pycharm. Pycharm seems to be a nice robust graphical editor with many features.  I really like the version control setup in Pycharm.  Additionally, Pycharm offers a nice debugging environement. I like the way projects are set up in folders. Some useful shortcuts include :
+
+cmmd / : comment out
+alt + shift e: execute line in console
+cmmd + shift + up arrow/down arrow: move code line up or down accordingly
+cmmd + D: duplicate current line
+cmmd + P: paramater info
+shift + tab: unindent line
+
+and many more...
+
 
  
