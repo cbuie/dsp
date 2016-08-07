@@ -20,6 +20,14 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 ###Q2.  List Files in Unix   
 
 What do the following commands do:  
+`ls`
+`ls -a`
+`ls -l`
+`ls -lh`
+`ls -lah`
+`ls -t`
+`ls -Glp`
+
 `ls`  List visible files and directories
 `ls -a`  List all files and directories
 `ls -l`  Display long listing of parent directory
@@ -27,9 +35,6 @@ What do the following commands do:
 `ls -lah`  long format, all files/folders, human readable size
 `ls -t`  list in order of last date first
 `ls -Glp`  Bold Cyan, long format, with slash if file is a directory
-
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
 ---
 
 ###Q3.  More List Files in Unix  
