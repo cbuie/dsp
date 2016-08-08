@@ -71,7 +71,9 @@ ls -r Reverse the order of the sort to get reverse lexicographical order
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs command is designed to construct argument lists and invoke other utility. xargs reads items from the standard input or pipes, delimited by blanks or newlines, and executes the command one or more times with any initial-arguments followed by items read from standard input.
 
- 
+example:
 
+find .txt files in dir and one level up and remove them
+find . -name "*.txt" -type f -print | xargs /bin/rm -f
