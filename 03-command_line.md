@@ -54,7 +54,16 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+ls -R list files in dir recursively
+ls -m display files in csv format
+ls -1 display each file on a row
+ls -F Display a slash (`/') immediately after each pathname that is a
+      directory, an asterisk (`*') after each that is executable, an at
+      sign (`@') after each symbolic link, an equals sign (`=') after
+      each socket, a percent sign (`%') after each whiteout, and a ver-
+      tical bar (`|') after each that is a FIFO
+ls -r Reverse the order of the sort to get reverse lexicographical order
 
 ---
 
