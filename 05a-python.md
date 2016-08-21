@@ -12,7 +12,10 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>
+The most important distinction between a list and a tuple is that a tuple is not mutable and a list is mutable.
+Because dictionary keys must be immutable, in certain situation you can use tuples as dictionary keys. However, list can never be used as keys in
+dictionaries. The list data structure has several methods tuples do not. Most notably list have the append, extend, remove, pop.
 
 ---
 
