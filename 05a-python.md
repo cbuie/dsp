@@ -24,10 +24,7 @@ dictionaries. The list data structure has several methods tuples do not. Most no
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
 >>
-A list keeps order and set do not, when you care about order you have to use a list. Sets and lists are similar in that they both just contain values. This is different
-than a dictionary that use the key value system. Sets requires items to be hashable, list do not, if you have non-hashable items you cannot use set and must instead use list.
-Sets forbid duplicates, list does not. Checking for membership of a value in a set (or dict, for keys) is much faster (taking about a constant, short time), while in a list it takes
-time proportional to the list's length in the average and worst cases. The difference is sets are hashable while list are not.
+A list keeps order data and a set does not, when you care about order you have to use a list. Sets and lists are similar in that they both only contain values. This is different than dictionaries that uses the key value system. Sets require items to be hashable, list do not. If you have non-hashable items you cannot use a set and must use a list. Sets forbid duplicates, list do not. Checking for membership of a value in a set (or dict, for keys) is much faster (remaining relatively constant despite size of the set), while in a list it takes time proportional to the list's length. The difference is a set is hashable while a list is not.
 
 ###Q3. Lambda Function
 
