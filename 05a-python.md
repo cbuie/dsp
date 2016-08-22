@@ -33,7 +33,12 @@ time proportional to the list's length in the average and worst cases. The diffe
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>
+To generalize, a lambda function is a function that takes any number of arguments and returns the value of a single expression. lambda functions can not contain commands, and they can not contain more than one expression.
+lambda functions are a matter of style. Using them is never required; anywhere you could use them, you could define a separate normal function and use that instead. You can use them in places where you want to encapsulate specific,
+non-reusable code without littering your code with a lot of little one-line functions.
+
+ex: multiples_of_three = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 ---
 
