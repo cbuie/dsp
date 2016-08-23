@@ -50,11 +50,24 @@ The result will be a new list resulting from evaluating the expression in the co
 lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
 the result will be of the same type; otherwise, it is always a list.
 
+
+#map vs filter
+
+def f(x): return x % 2 != 0 and x % 3 != 0
+map(f, range(11)) #the ones that returns TRUE are 1, 5 and 7
+
+#[False, True, False, False, False, True, False, True, False, False, False]
+
+filter(f, range(11)) #So, filter returns 1, 5 and 7
+
+#[1, 5, 7]
+
 ```
 squares = [x**2 for x in range(10)]  #list comp
 squares_dict = {x: x**2 for x in (2, 4, 6)} #dictionary comp
 squares = map(lambda x: x**2, range(10)) #map
 ```
+
 ---
 
 ###Complete the following problems by editing the files below:
