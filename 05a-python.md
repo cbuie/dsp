@@ -49,10 +49,10 @@ or to create a subsequence of those elements that satisfy a certain condition. A
 The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. There are three built-in functions that are very useful when used with
 lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
 the result will be of the same type; otherwise, it is always a list.
-
+```
 squares = [x**2 for x in range(10)]
 squares = map(lambda x: x**2, range(10))
-
+```
 ---
 
 ###Complete the following problems by editing the files below:
