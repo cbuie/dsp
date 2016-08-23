@@ -50,9 +50,11 @@ The result will be a new list resulting from evaluating the expression in the co
 lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
 the result will be of the same type; otherwise, it is always a list.
 
-squares = [x**2 for x in range(10)]
-squares = map(lambda x: x**2, range(10))
-
+```
+squares = [x**2 for x in range(10)]  #list comp
+squares_dict = {x: x**2 for x in (2, 4, 6)} #dictionary comp
+squares = map(lambda x: x**2, range(10)) #map
+```
 ---
 
 ###Complete the following problems by editing the files below:
@@ -62,7 +64,7 @@ Use Python to compute days between start and stop date.
 a.  
 
 ```
-date_start = '01-02-2013'    
+date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
