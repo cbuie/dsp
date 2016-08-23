@@ -50,6 +50,8 @@ The result will be a new list resulting from evaluating the expression in the co
 lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
 the result will be of the same type; otherwise, it is always a list.
 
+filter(), as its name suggests, filters the original iterable and retents the items that returns True for the function provided to filter().map() on the other hand, apply the supplied function to each element of the iterable and return a list of results for each element.
+
 ```
 #map vs filter
 
