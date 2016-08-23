@@ -34,8 +34,10 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 To generalize, a lambda function is a function that takes any number of arguments and returns the value of a single expression. Lambda functions cannot contain commands, and they cannot contain more than one expression.
 Lambda functions are a matter of style. Using them is never required; anywhere you could use them, you could define a separate normal function and use that instead. You can use them in places where you want to encapsulate specific,
 non-reusable code without littering your code with a lot of little one-line functions.
-ex: multiples_of_three = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-
+ex:
+```
+multiples_of_three = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+```
 ---
 
 ###Q4. List Comprehension, Map &amp; Filter
@@ -50,26 +52,21 @@ The result will be a new list resulting from evaluating the expression in the co
 lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
 the result will be of the same type; otherwise, it is always a list.
 ```
-squares = [x**2 for x in range(10)]
-squares = map(lambda x: x**2, range(10))
+squares = [x**2 for x in range(10)]  #list comp
+squares_dict = {x: x**2 for x in (2, 4, 6)} #dictionary comp
+squares = map(lambda x: x**2, range(10)) #map
 
-```
-filter(), as its name suggests, filters the original iterable and retents the items that returns True for the function provided to filter().
+#map vs filter
 
-map() on the other hand, apply the supplied function to each element of the iterable and return a list of results for each element.
-
-```
 def f(x): return x % 2 != 0 and x % 3 != 0
 map(f, range(11)) #the ones that returns TRUE are 1, 5 and 7
 
-##[False, True, False, False, False, True, False, True, False, False, False]
+#[False, True, False, False, False, True, False, True, False, False, False]
 
 filter(f, range(11)) #So, filter returns 1, 5 and 7
 
-##[1, 5, 7]
-
+#[1, 5, 7]
 ```
-
 ---
 
 ###Complete the following problems by editing the files below:
