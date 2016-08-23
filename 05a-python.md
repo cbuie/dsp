@@ -56,16 +56,6 @@ squares = [x**2 for x in range(10)]  #list comp
 squares_dict = {x: x**2 for x in (2, 4, 6)} #dictionary comp
 squares = map(lambda x: x**2, range(10)) #map
 
-#map vs filter
-
-def f(x): return x % 2 != 0 and x % 3 != 0
-map(f, range(11)) #the ones that returns TRUE are 1, 5 and 7
-
-#[False, True, False, False, False, True, False, True, False, False, False]
-
-filter(f, range(11)) #So, filter returns 1, 5 and 7
-
-#[1, 5, 7]
 ```
 ---
 
