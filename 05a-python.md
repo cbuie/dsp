@@ -50,7 +50,6 @@ The result will be a new list resulting from evaluating the expression in the co
 lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
 the result will be of the same type; otherwise, it is always a list.
 
-
 #map vs filter
 
 def f(x): return x % 2 != 0 and x % 3 != 0
