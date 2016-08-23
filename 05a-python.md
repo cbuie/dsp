@@ -52,7 +52,24 @@ the result will be of the same type; otherwise, it is always a list.
 ```
 squares = [x**2 for x in range(10)]
 squares = map(lambda x: x**2, range(10))
+
 ```
+filter(), as its name suggests, filters the original iterable and retents the items that returns True for the function provided to filter().
+
+map() on the other hand, apply the supplied function to each element of the iterable and return a list of results for each element.
+
+```
+def f(x): return x % 2 != 0 and x % 3 != 0
+map(f, range(11)) #the ones that returns TRUE are 1, 5 and 7
+
+##[False, True, False, False, False, True, False, True, False, False, False]
+
+filter(f, range(11)) #So, filter returns 1, 5 and 7
+
+##[1, 5, 7]
+
+```
+
 ---
 
 ###Complete the following problems by editing the files below:
