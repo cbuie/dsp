@@ -43,7 +43,16 @@ ex: multiples_of_three = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>>
+Source: https://docs.python.org/2/tutorial/datastructures.html
+List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable,
+or to create a subsequence of those elements that satisfy a certain condition. A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses.
+The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. There are three built-in functions that are very useful when used with
+lists: filter(), map(), and reduce(). filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true. If sequence is a str, unicode or tuple,
+the result will be of the same type; otherwise, it is always a list.
+
+squares = [x**2 for x in range(10)]
+squares = map(lambda x: x**2, range(10))
 
 ---
 
