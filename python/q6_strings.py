@@ -40,24 +40,15 @@ for i in str('here are a bunch of words to test').split(): print both_ends(i)
 
 
 def fix_start(s):
-    """
-    Given a string s, return a string where all occurences of its
-    first char have been changed to '*', except do not change the
-    first char itself. e.g. 'babble' yields 'ba**le' Assume that the
-    string is length 1 or more.
+    s0 = s[0]
+    return s0+s[1:].replace(s[0],'*')
+    
+print fix_start('babble')
+print fix_start('aardvark')
+print fix_start('google')
+print fix_start('donut')
 
-    >>> fix_start('babble')
-    'ba**le'
-    >>> fix_start('aardvark')
-    'a*rdv*rk'
-    >>> fix_start('google')
-    'goo*le'
-    >>> fix_start('donut')
-    'donut'
-    """
-    raise NotImplementedError
-
-
+########################################################################
 
 def mix_up(a,b):
     if len(a) + len(b)>4:
@@ -72,42 +63,38 @@ print mix_up('gnash', 'sport')
 print mix_up('pezzy', 'firm')
 print mix_up('a','b')
 
+########################################################################
 
 def verbing(s):
-    """
-    Given a string, if its length is at least 3, add 'ing' to its end.
-    Unless it already ends in 'ing', in which case add 'ly' instead.
-    If the string length is less than 3, leave it unchanged. Return
-    the resulting string.
+    if len(s)>2:
+        if s[3:] == 'ing':
+            return s.__add__('ly')
+        else:
+            return s.__add__('ing')
+    else:
+        return s
 
-    >>> verbing('hail')
-    'hailing'
-    >>> verbing('swiming')
-    'swimingly'
-    >>> verbing('do')
-    'do'
-    """
-    raise NotImplementedError
+print verbing('hail')
+print verbing('swiming')
+print verbing('do')
 
+########################################################################
 
 def not_bad(s):
-    """
-    Given a string, find the first appearance of the substring 'not'
-    and 'bad'. If the 'bad' follows the 'not', replace the whole
-    'not'...'bad' substring with 'good'. Return the resulting string.
-    So 'This dinner is not that bad!' yields: 'This dinner is
-    good!'
+    try:
+        n = s.rindex('not'); b = s.rindex('bad')+3
+        if n<b:
+            return s.replace(s[n:b],'good')
+        else:
+            return s
+    except:
+            return s
 
-    >>> not_bad('This movie is not so bad')
-    'This movie is good'
-    >>> not_bad('This dinner is not that bad!')
-    'This dinner is good!'
-    >>> not_bad('This tea is not hot')
-    'This tea is not hot'
-    >>> not_bad("It's bad yet not")
-    "It's bad yet not"
-    """
-    raise NotImplementedError
+
+print not_bad('This movie is not so bad')
+print not_bad('This dinner is not that bad!')
+print not_bad('This tea is not hot')
+print not_bad("It's bad yet not")
 
 
 def front_back(a, b):
