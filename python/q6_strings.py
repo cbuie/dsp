@@ -17,8 +17,7 @@ def donuts(count):
         raise NotImplementedError('input must be a number')
 
 # test it out:
-for i in range(1,20,2):
-    donuts(i)
+for i in range(1,20,2):donuts(i)
     
 ########################################################################
 def both_ends(s):
@@ -33,6 +32,9 @@ def both_ends(s):
             return ''
     except:
         raise NotImplementedError('input was not an int')
+
+# test it out:
+for i in str('here are a bunch of words to test').split(): print both_ends(i)
 
 ########################################################################
 
