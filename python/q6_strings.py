@@ -3,41 +3,38 @@
 
 
 def donuts(count):
-    """
-    Given an int count of a number of donuts, return a string of the
-    form 'Number of donuts: <count>', where <count> is the number
-    passed in. However, if the count is 10 or more, then use the word
-    'many' instead of the actual count.
+    '''
+    input must be an int
+    :param count:
+    '''
 
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
-    """
-    raise NotImplementedError
+    try:
+        if int(count) < 10:
+            print "Number of dounts: %s" %count
+        else:
+            print "Number of donuts: many"
+    except:
+        raise NotImplementedError('input must be a number')
 
-
+# test it out:
+for i in range(1,20,2):
+    donuts(i)
+    
+########################################################################
 def both_ends(s):
-    """
-    Given a string s, return a string made of the first 2 and the last
-    2 chars of the original string, so 'spring' yields 'spng'.
-    However, if the string length is less than 2, return instead the
-    empty string.
+    '''
+    :param s: input a string
+    :return: first 2 chars and last 2 chars
+    '''
+    try:
+        if len(s) > 2:
+            return s[:2]+s[-2:]
+        elif len(s) <= 2:
+            return ''
+    except:
+        raise NotImplementedError('input was not an int')
 
-    >>> both_ends('spring')
-    'spng'
-    >>> both_ends('Hello')
-    'Helo'
-    >>> both_ends('a')
-    ''
-    >>> both_ends('xyz')
-    'xyyz'
-    """
-    raise NotImplementedError
+########################################################################
 
 
 def fix_start(s):
