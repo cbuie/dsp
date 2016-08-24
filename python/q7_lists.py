@@ -2,54 +2,38 @@
 # Licensed under the Apache License, Version 2.0
 
 
-def match_ends(words):
-    """
-    Given a list of strings, return the count of the number of strings
-    where the string length is 2 or more and the first and last chars
-    of the string are the same.
+def match_ends(l):
+    def f(x): return len(x) > 1 and  x[:1] ==  x[-1:]
+    x = list(filter(f, l))
+    return(len(x))
 
-    >>> match_ends(['aba', 'xyz', 'aa', 'x', 'bbb'])
-    3
-    >>> match_ends(['', 'x', 'xy', 'xyx', 'xx'])
-    2
-    >>> match_ends(['aaa', 'be', 'abc', 'hello'])
-    1
-    """
-    raise NotImplementedError
+print (match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']))
+print (match_ends(['', 'x', 'xy', 'xyx', 'xx']))
+print (match_ends(['aaa', 'be', 'abc', 'hello']))
 
+###########################################################################
 
-def front_x(words):
-    """
-    Given a list of strings, return a list with the strings in sorted
-    order, except group all the strings that begin with 'x' first.
-    e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
-         ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
+def front_x (l):
+    l.sort()
+    xl = [i for i in l if i.startswith('x')]
+    for i in xl: l.remove(i)
+    return xl + l
 
-    >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
-    ['xaa', 'xzz', 'axx', 'bbb', 'ccc']
-    >>> front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa'])
-    ['xaa', 'xcc', 'aaa', 'bbb', 'ccc']
-    >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
-    ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
-    """
-    raise NotImplementedError
+print(front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa']))
+print(front_x(['ccc', 'bbb', 'aaa', 'xcc', 'xaa']))
+print(front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark']))
+
+###########################################################################
 
 
-def sort_last(tuples):
-    """
-    Given a list of non-empty tuples, return a list sorted in
-    increasing order by the last element in each tuple.
-    e.g. [(1, 7), (1, 3), (3, 4, 5), (2, 2)] yields
-         [(2, 2), (1, 3), (3, 4, 5), (1, 7)].
+def sort_last(l):
+    return sorted(l, key=lambda tup: tup[1])
 
-    >>> sort_last([(1, 3), (3, 2), (2, 1)])
-    [(2, 1), (3, 2), (1, 3)]
-    >>> sort_last([(2, 3), (1, 2), (3, 1)])
-    [(3, 1), (1, 2), (2, 3)]
-    >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
-    [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
-    """
-    raise NotImplementedError
+print(sort_last([(1, 3), (3, 2), (2, 1)]))
+print(sort_last([(2, 3), (1, 2), (3, 1)]))
+print(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]))
+
+###########################################################################
 
 
 def remove_adjacent(nums):
@@ -70,6 +54,24 @@ def remove_adjacent(nums):
     """
     raise NotImplementedError
 
+# l = [1, 2, 2, 3, 2]
+# l2= []
+# for i in range(len(l)):
+#     if(i!=len(l)-1):
+#         if((l[i] == l[i+1])):
+#             print (i)
+#
+#
+#             l2.append(i)
+#         else:
+#             continue
+#
+#
+#
+#     def remove_adjacent(nums):
+
+
+
 
 def linear_merge(list1, list2):
     """
@@ -86,3 +88,5 @@ def linear_merge(list1, list2):
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
     raise NotImplementedError
+
+
