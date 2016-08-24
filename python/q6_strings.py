@@ -58,22 +58,19 @@ def fix_start(s):
     raise NotImplementedError
 
 
-def mix_up(a, b):
-    """
-    Given strings a and b, return a single string with a and b
-    separated by a space '<a> <b>', except swap the first 2 chars of
-    each string. Assume a and b are length 2 or more.
 
-    >>> mix_up('mix', 'pod')
-    'pox mid'
-    >>> mix_up('dog', 'dinner')
-    'dig donner'
-    >>> mix_up('gnash', 'sport')
-    'spash gnort'
-    >>> mix_up('pezzy', 'firm')
-    'fizzy perm'
-    """
-    raise NotImplementedError
+def mix_up(a,b):
+    if len(a) + len(b)>4:
+        a0 = (a[:2]);b0 = (b[:2])
+        return a.replace(a0,b0)+' '+b.replace( b0,a0)
+    else:
+        raise ValueError('both arguments be at least 2 chars long')
+
+print mix_up('mix', 'pod')
+print mix_up('dog', 'dinner')
+print mix_up('gnash', 'sport')
+print mix_up('pezzy', 'firm')
+print mix_up('a','b')
 
 
 def verbing(s):
