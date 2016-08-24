@@ -96,6 +96,13 @@ b.
 ```
 date_start = '12312013'  
 date_stop = '05282015'  
+
+from datetime import datetime
+
+
+d1 = datetime.strptime(date_stop, "%m%d%Y")
+d2 = datetime.strptime(date_start, "%m%d%Y")
+print d1-d2
 ```
 
 >> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
@@ -106,7 +113,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 513 days, 0:00:00
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
