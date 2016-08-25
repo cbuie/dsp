@@ -59,9 +59,7 @@ def linear_merge(list1, list2):
     return sorted(list1 + list2)
 
 print(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']))
-#['aa', 'bb', 'cc', 'xx', 'zz']
 print(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']))
-#['aa', 'bb', 'cc', 'xx', 'zz']
 print(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']))
-#['aa', 'aa', 'aa', 'bb', 'bb']
+
 
