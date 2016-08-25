@@ -35,58 +35,33 @@ print(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]))
 
 ###########################################################################
 
+def remove_adjacent(l):
+    l2 = []
+    for i in range(len(l)):
+        if (i != len(l) - 1):
+            if ((l[i] == l[i + 1])):
+                continue
+            else:
+                l2.append(l[i])
 
-def remove_adjacent(nums):
-    """
-    Given a list of numbers, return a list where all adjacent equal
-    elements have been reduced to a single element, so [1, 2, 2, 3]
-    returns [1, 2, 3]. You may create a new list or modify the passed
-    in list.
+        else:
+            l2.append(l[i])
+    return l2
 
-    >>> remove_adjacent([1, 2, 2, 3])
-    [1, 2, 3]
-    >>> remove_adjacent([2, 2, 3, 3, 3])
-    [2, 3]
-    >>> remove_adjacent([3, 2, 3, 3, 3])
-    [3, 2, 3]
-    >>> remove_adjacent([])
-    []
-    """
-    raise NotImplementedError
-
-# l = [1, 2, 2, 3, 2]
-# l2= []
-# for i in range(len(l)):
-#     if(i!=len(l)-1):
-#         if((l[i] == l[i+1])):
-#             print (i)
-#
-#
-#             l2.append(i)
-#         else:
-#             continue
-#
-#
-#
-#     def remove_adjacent(nums):
+print(remove_adjacent([1, 2, 2, 3]))
+print(remove_adjacent([2, 2, 3, 3, 3]))
+print(remove_adjacent([3, 2, 3, 3, 3]))
 
 
-
+###########################################################################
 
 def linear_merge(list1, list2):
-    """
-    Given two lists sorted in increasing order, create and return a
-    merged list of all the elements in sorted order. You may modify
-    the passed in lists. Ideally, the solution should work in "linear"
-    time, making a single pass of both lists.
+    return sorted(list1 + list2)
 
-    >>> linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
-    ['aa', 'bb', 'cc', 'xx', 'zz']
-    >>> linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz'])
-    ['aa', 'bb', 'cc', 'xx', 'zz']
-    >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
-    ['aa', 'aa', 'aa', 'bb', 'bb']
-    """
-    raise NotImplementedError
-
+print(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']))
+#['aa', 'bb', 'cc', 'xx', 'zz']
+print(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']))
+#['aa', 'bb', 'cc', 'xx', 'zz']
+print(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']))
+#['aa', 'aa', 'aa', 'bb', 'bb']
 
