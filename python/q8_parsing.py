@@ -16,7 +16,7 @@ def load_mydata (fin,feature):
     return r
 
 
-def find_min(data,f1,f2):
+def find_min_diff(data,f1,f2):
     ml = []
     for i in data:
         x = i, abs(int(data[i]['Goals']) - int(data[i]['Goals Allowed']))
@@ -26,5 +26,5 @@ def find_min(data,f1,f2):
 
 
 data = load_mydata('python/football.csv','Team')
-result = find_min(data,'Goals','Goals Allowed')
+result = find_min_diff(data,'Goals','Goals Allowed')
 print result
