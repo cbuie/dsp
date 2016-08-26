@@ -4,7 +4,6 @@
 # against opponents, and had 36 goals scored against them). Write a program to read the file, 
 # then print the name of the team with the smallest difference in ‘for’ and ‘against’ goals.
 
-
 def load_mydata (fin,feature):
     import csv
     reader = csv.DictReader(open(fin))
@@ -12,7 +11,6 @@ def load_mydata (fin,feature):
     for row in reader:
         key = row.pop(feature)
         if key in r:
-            # implement your duplicate row handling here
             pass
         r[key] = row
     return r
@@ -21,7 +19,7 @@ def load_mydata (fin,feature):
 def find_min(data,f1,f2):
     ml = []
     for i in data:
-        x = i, int(data[i]['Goals']) - int(data[i]['Goals Allowed'])
+        x = i, abs(int(data[i]['Goals']) - int(data[i]['Goals Allowed']))
         ml.append(x)
     ml = sorted(ml, key=lambda tup: tup[1])
     return ml[0]
