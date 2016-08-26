@@ -19,7 +19,7 @@ def load_mydata (fin,feature):
 def find_min(data,f1,f2):
     ml = []
     for i in data:
-        x = i, int(data[i]['Goals']) - int(data[i]['Goals Allowed'])
+        x = i, abs(int(data[i]['Goals']) - int(data[i]['Goals Allowed']))
         ml.append(x)
     ml = sorted(ml, key=lambda tup: tup[1])
     return ml[0]
