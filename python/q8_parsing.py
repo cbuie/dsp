@@ -11,7 +11,6 @@ def load_mydata (fin,feature):
     for row in reader:
         key = row.pop(feature)
         if key in r:
-            # implement your duplicate row handling here
             pass
         r[key] = row
     return r
