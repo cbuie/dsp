@@ -45,3 +45,82 @@ fout='/Users/chrisbuie/PycharmProjects/dsp/python/emails.csv'
 with open(fout, 'wb') as myfile:
     for e in email_list:
         csv.writer(myfile).writerow([e])
+
+#part III dictionary:
+
+
+import csv
+
+#helper f(x) create first, last name from name in csv:
+
+
+
+def last_name(name):
+    '''
+    extract and append last name
+    :param name: full name from faculty.csv
+    :return : nothing
+    '''
+    name.append(name[0].split()[len(name[0].split()) - 1])
+
+
+def name_tup(name):
+    if len(name[0].split()[0]) < 3:
+        x = name[0].split()[1], name[0].split()[len(name[0].split())-1]
+        name.append(x)
+    else:
+        x = name[0].split()[0], name[0].split()[len(name[0].split())-1]
+        name.append(x)
+
+
+#Q6 print specified dictionary format:
+
+#read in csv and create dictionary:
+
+
+reader = csv.reader(open('python/faculty.csv'))
+
+l_name_dict = {}
+for row in reader:
+    last_name(row)
+    key = row[4]
+    if key in l_name_dict:
+        l_name_dict[key] = [l_name_dict[key], row[:-1]]
+        continue
+    l_name_dict[key] = row[:-1]
+
+print l_name_dict['Ellenberg']
+print l_name_dict['Xie']
+
+for l_name in range(0,3):
+    print l_name_dict.keys()[l_name],' : ' ,l_name_dict[l_name_dict.keys()[l_name]]
+
+
+# >>> # dictionary sorted by key
+import collections
+d = {'banana': 3, 'apple':4, 'pear': 1, 'orange': 2}
+collections.OrderedDict(sorted(d.(), key=lambda t: t[1]))
+#OrderedDict([('apple', 4), ('banana', 3), ('orange', 2), ('pear', 1)])
+
+'''
+
+faculty_dict = { 'Ellenberg': [['Ph.D.', 'Professor', 'sellenbe@upenn.edu'], ['Ph.D.', 'Professor', 'jellenbe@mail.med.upenn.edu']],
+              'Li': [['Ph.D.', 'Assistant Professor', 'liy3@email.chop.edu'], ['Ph.D.', 'Associate Professor', 'mingyao@mail.med.upenn.edu'], ['Ph.D.', 'Professor', 'hongzhe@upenn.edu']]}
+
+'''
+
+#
+# def name_tup():
+#     for name in result.keys():
+#         if len(tuple(name.split())[0]) < 3:
+#             x = tuple(name.split())[1], tuple(name.split())[len(tuple(name.split()))-1]
+#             result[name].append(x)
+#         else:
+#             x = tuple(name.split())[0], tuple(name.split())[len(tuple(name.split())) - 1]
+#             result[name].append(x)
+#     return result
+#
+# new_dict = name_tup()
+# print new_dict
+#
+# dict = dict.fromkeys(new_keys,result.values())
