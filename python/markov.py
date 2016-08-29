@@ -30,37 +30,42 @@ def word_list(fin): #scrub text file input and create word list, eliminate speci
     return word_list
 
 
-def word_dict(w): #create a dictionary with keys from consecutive pairs.
+def word_dict(words):
     d = {}
-    for i, word in enumerate(w):
+    for i, word in enumerate(words):
         try:
-            x, y, z = w[i], w[i+1], w[i+2]
+            first, second, third = words[i], words[i+1], words[i+2]
         except IndexError:
             break
-        key = (x, y)
+        key = (first, second)
         if key not in d:
             d[key] = []
         #
-        d[key].append(z)
+        d[key].append(third)
 
     return d
 
 
-def fab_key (x): #fabricate a new key
+def fab_key (x0): #fabricate a new key
     x1 = x0[0][1]
-    if  len(x0[0])>1:
+    if  len(x0[1])>1:
         x2 = random.choice(x0[1])
     else:
-        x2 = x0[0]
-    print x1,x2
+        x2 = x0[1][0]
+    x3 = x1,x2
+    return  x3
 
-words = word_list(fin)
-word_dict = word_dict(words)
+
+words = word_list(fin) #list of words from file
+dow = word_dict(words) #dictionary from words
 
 
 sentence = []
-randomKey = random.choice(word_dict.keys()), word_dict[random.choice(word_dict.keys())]
+randomKey = random.choice(dow.keys()), dow[random.choice(dow.keys())]
+print randomKey
 for i in range(len(randomKey)): sentence.append(randomKey[0][i])
+print sentence
+print dow[fab_key(randomKey)]
 
 
 
