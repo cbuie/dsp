@@ -16,12 +16,13 @@ import re
 
 fin = 'python/Beyond Good and Evil'
 
+
 def word_list(fin):
     word_list = []
     with open(fin,'r') as fit:
         for line in fit:
             for word in line.split():
-                word_list.append(word)
+                word_list.append(re.sub('\W+','', word).lower())
     return word_list
 
 
@@ -39,6 +40,7 @@ def word_dict(words):
         d[key].append(third)
 
     return d
+
 
 words = word_list(fin)
 word_tups = word_dict(words)
