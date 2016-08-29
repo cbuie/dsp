@@ -43,4 +43,4 @@ def word_dict(words):
 
 
 words = word_list(fin)
-word_tups = word_dict(words)
+word_dict = word_dict(words)
