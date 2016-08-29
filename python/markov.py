@@ -18,7 +18,7 @@ import random
 fin = 'python/Beyond Good and Evil'
 
 
-def word_list(fin):
+def word_list(fin): #scrub text file input and create word list, eliminate special characters and numbers
     word_list = []
     with open(fin,'r') as fit:
         for line in fit:
@@ -30,7 +30,7 @@ def word_list(fin):
     return word_list
 
 
-def word_dict(w):
+def word_dict(w): #create a dictionary with keys from consecutive pairs.
     d = {}
     for i, word in enumerate(w):
         try:
@@ -46,12 +46,25 @@ def word_dict(w):
     return d
 
 
+def fab_key (x): #fabricate a new key
+    x1 = x0[0][1]
+    if  len(x0[0])>1:
+        x2 = random.choice(x0[1])
+    else:
+        x2 = x0[0]
+    print x1,x2
+
 words = word_list(fin)
 word_dict = word_dict(words)
 
 
+sentence = []
+randomKey = random.choice(word_dict.keys()), word_dict[random.choice(word_dict.keys())]
+for i in range(len(randomKey)): sentence.append(randomKey[0][i])
 
-x0 = random.choice(word_dict.keys()), word_dict[random.choice(word_dict.keys())]
+
+
+
 print x0
 print x0[0][1], x0[1][0]
 x1 =  x0[0][1], x0[1][0]
