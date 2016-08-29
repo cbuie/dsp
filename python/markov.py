@@ -12,6 +12,7 @@
 
 # There are design choices to make; feel free to experiment and shape the program as you see fit. Jeff Atwood's [Markov and You](http://blog.codinghorror.com/markov-and-you/) is a fun place to get started learning about what you're trying to make.
 import re
+import random
 
 
 fin = 'python/Beyond Good and Evil'
@@ -22,25 +23,39 @@ def word_list(fin):
     with open(fin,'r') as fit:
         for line in fit:
             for word in line.split():
-                word_list.append(re.sub('\W+','', word).lower())
+                if re.sub('\W+','', word).lower().isdigit():
+                    pass
+                else:
+                    word_list.append(re.sub('\W+','', word).lower())
     return word_list
 
 
-def word_dict(words):
+def word_dict(w):
     d = {}
-    for i, word in enumerate(words):
+    for i, word in enumerate(w):
         try:
-            first, second, third = words[i], words[i+1], words[i+2]
+            x, y, z = w[i], w[i+1], w[i+2]
         except IndexError:
             break
-        key = (first, second)
+        key = (x, y)
         if key not in d:
             d[key] = []
         #
-        d[key].append(third)
+        d[key].append(z)
 
     return d
 
 
 words = word_list(fin)
 word_dict = word_dict(words)
+
+
+
+x0 = random.choice(word_dict.keys()), word_dict[random.choice(word_dict.keys())]
+print x0
+print x0[0][1], x0[1][0]
+x1 =  x0[0][1], x0[1][0]
+print x1
+print word_dict[x1]
+
+
