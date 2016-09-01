@@ -15,7 +15,7 @@ import re
 import random
 
 
-fin = 'python/Beyond Good and Evil'
+fin = 'python/Republic'
 
 
 def word_list(fin): #scrub text file input and create word list, eliminate special characters and numbers
@@ -34,24 +34,21 @@ def word_dict(words):
     d = {}
     for i, word in enumerate(words):
         try:
-            first, second, third = words[i], words[i+1], words[i+2]
+            w1, w2, w3 = words[i], words[i+1], words[i+2]
         except IndexError:
             break
-        key = (first, second)
+        key = (w1, w2)
         if key not in d:
             d[key] = []
         #
-        d[key].append(third)
+        d[key].append(w3)
 
     return d
 
 
 def fab_key (x0): #fabricate a new key
     x1 = x0[0][1]
-    if  len(x0[1])>1:
-        x2 = random.choice(x0[1])
-    else:
-        x2 = x0[1][0]
+    x2 = x0[1]
     x3 = x1,x2
     return  x3
 
@@ -61,19 +58,54 @@ dow = word_dict(words) #dictionary from words
 
 
 sentence = []
-randomKey = random.choice(dow.keys()), dow[random.choice(dow.keys())]
-print randomKey
-for i in range(len(randomKey)): sentence.append(randomKey[0][i])
+randomKey = random.choice(dow.keys())
+count = 0
+while (count < 5):
+    try:
+        current_state = randomKey, random.choice(dow[randomKey])
+        for i in range(len(current_state)): sentence.append(current_state[0][i])
+        sentence.append(current_state[1])
+    except:
+        print 'fail'
+        pass
+    count =+1
+
+
+    while (count < 5):
+        try:
+            sentence.append(random.choice(dow[fab_key(current_state)]))
+            print count
+            count = count + 1
+        except:
+            print 'fail'
+            break
+count = count + 1
 print sentence
+
+
+
+
+print fab_key(current_state)
 print dow[fab_key(randomKey)]
 
-
-
-
-print x0
-print x0[0][1], x0[1][0]
-x1 =  x0[0][1], x0[1][0]
-print x1
-print word_dict[x1]
-
+# li = [key for key in d.keys() if key[0][0].isupper()]
+# key = choice(li)
+#
+# li = []
+# first, second = key
+# li.append(first)
+# li.append(second)
+# while True:
+#     try:
+#         third = choice(d[key])
+#     except KeyError:
+#         break
+#     li.append(third)
+#     if third[-1] in EOS:
+#         break
+#     # else
+#     key = (second, third)
+#     first, second = key
+#
+# return ' '.join(li)
 
