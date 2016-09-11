@@ -24,62 +24,83 @@ for i in [A,B,C,D,u,w]:
 
 
 #2.1 u + v
-print '2.1:',u + v
+print '2.1: ',u + v
 
 
 #2.2 u - v
-print '2.2:',u - v
+print '2.2: ',u - v
 
 
 #2.3 alpha u
 alpha = 6
-print '2.3:',alpha*u
+print '2.3: ',alpha*u
 
 
 #2.4 u*v
-print '2.4:',u*v
+print '2.4: ',u*v
 
 
 #2.5 ||u||
-print '2.5:',np.linalg.norm(u)
+print '2.5: ',np.linalg.norm(u)
 
 
 #3.1
-print '3.1:', A+C
+try:
+    A+C
+    print '3.1: ', A+C
+except:
+    print '3.1: ','Not Defined'
 
 
 
 #3.2
-print '3.2:', A-np.transpose(C)
+print '3.2: ', A-np.transpose(C)
 
 
 #3.3
-print '3.3:', np.transpose(C) + 3*D
+print '3.3: ', np.transpose(C) + 3*D
 
 
 #3.4
-print '3.4:', B*A
+try:
+    B*A
+    print '3.4: ', B*A
+except:
+    print '3.4: ','Not Defined'
+
 
 
 #3.5
-print '3.5:', B*np.transpose(A)
+try:
+    B * np.transpose(A)
+    print '3.5: ', B*np.transpose(A)
+except:
+    print '3.5: ','Not Defined'
+
 
 
 #3.6
-print '3.6:', np.dot(B*C)
-
+try:
+    np.dot(B*C)
+    print '3.6: ', np.dot(B*C)
+except:
+    print '3.6: ','Not Defined'
 
 #3.7
-print '3.7:', np.dot(C,B)
+try:
+    np.dot(B * C)
+    print '3.7: ', np.dot(C,B)
+except:
+    print '3.7: ','Not Defined'
 
 
 #3.8
-print '3.8:', B**4
+print '3.8: ', B**4
 
 #3.9
-print '3.9:', np.dot(A,np.transpose(A))
+print '3.9: ', np.dot(A,np.transpose(A))
 
 
 
 #3.10
-print '3.10:', np.dot(np.transpose(D),D)
+print '3.10: ', np.dot(np.transpose(D),D)
