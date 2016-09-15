@@ -1,12 +1,16 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
+The effect size measured by Cohen's d for total weight when comparing 1rst born to others is minimal.  In fact, the diffence is just over 1 oz difference between the two groups.  That means the difference is around 0.7%. In comparison to birth length, birth weight also seems to suggest a weak correlation between any meaningful difference in birth order.
+
+
+
+```
 1rst total weight mean:  7.20109443044
 Others total weight mean:  7.32585561497
 1rst std:  1.42057287772
 other std:  1.39419547621
 cohens d -0.0886729270726
-
-The effect size measured by Cohen's d for total weight when comparing 1rst born to others is minimal.  In fact, the diffence is just over 1 oz difference between the two groups.  That means the difference is around 0.7%. In comparison to birth length, birth weight also seems to suggest a weak correlation between any meaningful difference in birth order.
+```
 
 ```
 #code used, adapted from ThinkStats2 page 24.
