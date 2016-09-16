@@ -5,11 +5,11 @@
 
 ![Alt text](https://github.com/cbuie/dsp/blob/master/bias%20vs%20unbias.png?raw=true "Biased vs Unbiased")
 
-code used to compute the answeres.
+
 
 1.02420515504 2.40367910066
 
-
+code used to compute the answeres.
 ```
 
 import chap01soln
