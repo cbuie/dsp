@@ -21,15 +21,15 @@ print '1rst std: ', first.totalwgt_lb.std()
 print 'other std: ', others.totalwgt_lb.std()
 
 Cohen's d  is meant to convey the size of the effect by comparing the mean diff. between two groups to the
-variablility within the two groups (pooled std dev).  
+variablility within the two groups (pooled std dev).
 
 def cohens_d(grp1, grp2):
     import math
     mean_diff = grp1.mean() - grp2.mean()
-    
+
     var1 = grp1.var(); var2 = grp2.var()
     n1 = len(grp1); n2 = len(grp2)
-    
+
     pooled_var = (n1 * var1 + n2 * var2)/ (n1 + n2)
     d = mean_diff / math.sqrt(pooled_var)
     return d
