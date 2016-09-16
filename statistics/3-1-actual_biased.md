@@ -7,7 +7,8 @@
 
 
 
-1.02420515504 2.40367910066
+Unbiased mean: 1.02420515504 
+Biased mean: 2.40367910066
 
 code used to compute the answeres.
 ```
