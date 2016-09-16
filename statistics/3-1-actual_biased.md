@@ -1,8 +1,12 @@
 [Think Stats Chapter 3 Exercise 1](http://greenteapress.com/thinkstats2/html/thinkstats2004.html#toc31) (actual vs. biased)
 
-#code used to compute the answeres.
+
+
+code used to compute the answeres.
 
 1.02420515504 2.40367910066
+
+
 
 ```
 
