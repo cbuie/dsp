@@ -6,6 +6,8 @@ code used to compute the answeres.
 
 1.02420515504 2.40367910066
 
+![Alt text](cbuie/dsp/bias vs unbias.png?raw=true "Biased vs Unbiased")
+
 
 
 ```
