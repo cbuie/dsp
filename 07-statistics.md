@@ -96,7 +96,7 @@ How do frequentist and Bayesian statistics compare?
 >>  
   The Bayesian view:
 >>  
-  P(h) = # heads/ # possibilities. Where all possibilities are equally likely and the data are fixed. Therefore, given a certain initial condition the outcome is fixed. The reason we see variations in outcomes can be attributed to the fact that the parameters are not fixed. The probability does not represent a long run frequency it represents an uncertainty.  
+  P(h) = # heads/ # possibilities. Where all possibilities are equally likely and the data are fixed. Therefore, given a certain initial condition the outcome is fixed. The reason we see variation in outcomes can be attributed to the fact that the parameters are not fixed. The probability does not represent a long run frequency it represents an uncertainty.  
 >>  
   In summary the Frequentist would consider the data free to vary and the parameters to be fixed. While the Bayesian would consider the opposite, with the data fixed and the parameters free to vary. The Bayesian view creates a probability distribution and the Frequentist creates a sample distribution.
 
