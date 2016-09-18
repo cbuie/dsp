@@ -87,7 +87,18 @@ P(tb|f) = 1/2*1/2 = 1/4 = 0.25
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 
+Using the traditional approach to probability, I will attempt to explain the difference between the Frequentist p model and the Bayesian p model using the coin flip scenario.
+
+The Frequentist view:
+
+P(h) = relative freq. of head in a large series of identical flips. Assuming a random sample and data are free to vary. While the data are free to vary, the parameters are considered fixed. Relies on a series from an infinite number samples from a population.
+
+The Bayesian view:
+
+P(h) = # heads/ # possibilities. Where all possibilities are equally likely and the data are fixed. Therefore, given a certain initial condition the outcome is fixed. The reason we see variations in outcomes can be attributed to the fact that the parameters are not fixed. The probability does not represent a long run frequency it represents an uncertainty.  
+
+In summary the Frequentist would consider the data free to vary and the parameters to be fixed. While the Bayesian would consider the opposite, with the data fixed and the parameters free to vary. The Bayesian view creates a probability distribution and the Frequentist creates a sample distribution.
 
 ---
 
